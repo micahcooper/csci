@@ -1,0 +1,56 @@
+#############################################################
+##
+##  File:  Makefile.glob
+##
+##  Global settings for the Clubs project
+##
+
+##
+## Project definitions
+##
+PROJDIR		= /home/profs/kochut/src/Clubs
+LIBDIR		= $(PROJDIR)/lib
+CLASSESDIR	= $(PROJDIR)/classes
+
+
+##
+## Installation definitions
+##
+INST_WWWDIR	= /web/kochut/public_html
+INST_WEBAPPDIR	= $(INST_WWWDIR)/servlets/WEB-INF
+INST_CLASSESDIR	= $(INST_WEBAPPDIR)/classes
+INST_LIBDIR	= $(INST_WEBAPPDIR)/lib
+INST_TEMPLDIR	= $(INST_WEBAPPDIR)/templates
+
+INSTALL		= /usr/sbin/install
+RM		= /usr/bin/rm
+
+##
+## JDK definitions
+##
+JAVAHOME        = /usr/local/java/j2sdk1.4.2
+JAVA            = $(JAVAHOME)/bin/java
+JAVAC           = $(JAVAHOME)/bin/javac
+JAR             = $(JAVAHOME)/bin/jar
+
+
+##
+## J2EE definitions
+##
+#J2EE_JAR        = /home/profs/kochut/classes/j2ee.jar
+J2EE_JAR        = /opt/j2skee/j2ee.jar
+
+
+##
+## JDBC definitions
+##
+JDBC_JAR	= /home/profs/kochut/classes/mysql-connector-java-3.0.9-stable-bin.jar
+
+
+##
+## Freemarker definitions
+##
+#FREEMARKER_JAR	= /home/profs/kochut/classes/freemarker.jar
+FREEMARKER_JAR	= /opt/freemarker/lib/freemarker.jar
+
+

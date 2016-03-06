@@ -1,0 +1,32 @@
+prog2:
+total 36
+-rw-r--r--   1 cooper       374 Feb 29 22:38 README
+-rw-r--r--   1 cooper      1155 Feb 29 19:40 main.c
+-rw-r--r--   1 cooper       339 Feb 29 22:30 makefile
+-rw-------   1 cooper         0 Feb 29 22:39 rec1119
+drwxr-xr-x   2 cooper       512 Feb 29 22:33 samples
+-rw-r--r--   1 cooper      2208 Feb 29 19:15 upc.l
+-rw-r--r--   1 cooper      7040 Feb 29 22:34 upc.y
+-rw-r--r--   1 cooper      2614 Feb 29 22:34 y.tab.h
+
+prog2/samples:
+total 38
+-rw-r--r--   1 cooper       643 Feb 29 21:50 readme
+-rw-------   1 cooper        38 Feb 29 12:33 sample1.p
+-rw-------   1 cooper        60 Feb 29 21:37 sample10.p
+-rw-------   1 cooper        49 Feb 29 21:40 sample11.p
+-rw-------   1 cooper        50 Feb 29 21:43 sample12.p
+-rw-------   1 cooper        22 Feb 29 21:46 sample13.p
+-rw-------   1 cooper        28 Feb 29 21:46 sample14.p
+-rw-------   1 cooper        55 Feb 29 21:51 sample15.p
+-rw-------   1 cooper        61 Feb 29 21:51 sample16.p
+-rw-------   1 cooper        90 Feb 29 22:21 sample17.p
+-rw-------   1 cooper        89 Feb 29 22:33 sample2.p
+-rw-------   1 cooper        45 Feb 29 12:08 sample3.p
+-rw-------   1 cooper        36 Feb 29 10:41 sample4.p
+-rw-------   1 cooper        46 Feb 29 12:37 sample5.p
+-rw-------   1 cooper        95 Feb 29 12:42 sample6.p
+-rw-------   1 cooper        84 Feb 29 19:17 sample7.p
+-rw-------   1 cooper        60 Feb 29 19:29 sample8.p
+-rw-------   1 cooper        42 Feb 29 20:18 sample9.p
+-rw-------   1 cooper       192 Feb 29 10:55 template.p

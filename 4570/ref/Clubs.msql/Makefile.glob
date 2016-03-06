@@ -1,0 +1,30 @@
+# global settings
+#
+
+HTMLDESTDIR	= /home/profs/kochut/public_html
+CGIBINDIR	= /home/profs/kochut/public_html/cgi-bin
+
+
+MAKEDEP		= /home/profs/kochut/csx050/Clubs/makedep.sh
+
+CCC		= g++
+CCFLAGS		= -g
+#CCFLAGS	= -O4
+
+MSQL_INC	= /home/profs/kochut/Msql/include
+MSQL_LIB	= /home/profs/kochut/Msql/lib
+
+INSTALL		= /usr/ucb/install
+
+
+
+# compile rules
+#
+COMPILE.cpp	= $(CCC) $(CCFLAGS) $(CPPFLAGS) -c
+LINK.cpp	= $(CCC) $(CCFLAGS) $(CPPFLAGS) $(LDFLAGS)
+
+.SUFFIXES: .cpp
+
+.cpp.o:
+	$(COMPILE.cpp) $(OUTPUT_OPTION) $<
+

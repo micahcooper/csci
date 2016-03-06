@@ -1,0 +1,49 @@
+$count1
+	pushcI	1
+	fetchI
+	popI	7
+	pushcI	0
+	fetchI
+	popI	6, 134574088
+$2
+	pushcI	1
+	pusha	5
+	fetchI
+	eqI
+	jumpz	$3
+	pusha	6
+	fetchI
+	pusha	7
+	fetchI
+	addI
+	fetchI
+	popI	6, 134574088
+	pusha	7
+	fetchI
+	pushcI	1
+	addI
+	fetchI
+	popI	7
+	return
+	jump	$2
+$3
+	return
+main
+	enter	0
+	alloc	2
+	enter	0
+	pusha	5
+	call	$(null), 1
+	enter	0
+	pusha	5
+	fetchI
+	pusha	6
+	fetchI
+	call	$count1, 2
+	enter	0
+	pusha	6
+	fetchI
+	call	$(null), 1
+	enter	0
+	call	$writeln, 0
+	return

@@ -1,0 +1,41 @@
+
+	Line	Addr	Opcode	Arg1	Arg2		Statement
+       ------------------------------------------------------------------
+
+	  1	  6				$main1
+	  2	  6	 26	  2		        alloc   2			# allocate 2 words for i and j
+	  3	  8	 25	  1		        enter   1			# start calling scanf
+	  4	 10	 33	  0			pushs	"%d"			# push the format string
+	  5	 12	  7	  5			pusha	5			# push address (l-value) of i
+	  6	 14	 28	  4	  2		call	$scanf, 2		# now call scanf
+	  7	 17	  2	  4			popI	4			# dispose of the left-over value
+	  8	 19	  7	  6			pusha	6			# push j's address
+	  9	 21	  0	  9			pushcI	9			# push constant 9
+	 10	 23	  7	  5			pusha	5			# push i's address 
+	 11	 25	  5				fetchI				# retrieve the r-value
+	 12	 26	  0	  8			pushcI	8			# push constant 8
+	 13	 28	 11				mulI				# multiply i*8
+	 14	 29	  9				addI				# add	9 + i*8
+	 15	 30	 39				storeI				# save it in j's location
+	 16	 31	  2	  4			popI	4			# dispose of the left-over value
+	 17	 33	 25	  1			enter	1			# start calling printf
+	 18	 35	 33	  3			pushs	"Result is %d\n"	# push the format
+	 19	 37	  7	  6			pusha	6			# push value of j
+	 20	 39	  5				fetchI				# retrieve the r-value
+	 21	 40	 28	  2	  2		call	$printf, 2		# call printf
+	 22	 43	  2	  4			popI	4			# dispose of the left-over value
+	 23	 45	 35				returnf				# return from main
+	 24	 46				main
+	 25	 46	 25	  0			enter	0			# setup the main stack frame
+	 26	 48	 26	  0			alloc	0			# no allocation -- not really needed
+	 27	 50	 25	  0		        enter   0			# start calling main
+	 28	 52	 28	  6	  0	        call    $main1, 0		# make the call
+	 29	 55	  2	  4			popI	4			# dispose of the left-over value
+	 30	 57	 27			        return
+
+		CROSS REFERENCES
+
+	$main1    	6
+	$printf   	2
+	$scanf    	4
+	main      	46

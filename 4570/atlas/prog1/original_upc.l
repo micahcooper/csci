@@ -1,0 +1,67 @@
+%{
+#include "y.tab.h"
+
+int lineno = 2;
+%}
+newline			[\n]
+delim			[ \t]
+ws				{delim}+
+letter 			[a-zA-Z]
+digit 			[0-9]
+exp				(("e"|"E")({add_op}?)({unsigned_int}|{unsigned_int}))
+ident			(({letter})|({letter}({letter}|{digit})*))
+unsigned_int	(({digit})({digit}*))
+num_error		({digit}+([a-df-zA-DF-Z])([a-zA-Z]*))
+float			((({unsigned_int})(".")({unsigned_int}))({ws}|{semicolon})|(({unsigned_int})(".")({unsigned_int})({exp})))
+string_constant	('([^'\n]|'')+')
+comment 		(("{"[^}]*"}")|("(*"([^*]|"*"+[^*)])*"*"+")"))	
+semicolon		";"
+comma			","
+colon			":"
+lpar			\(
+rpar			\)
+program			([pP][rR][oO][gG][rR][aA][mM])
+var				([vV][aA][rR])
+add_op			(("+")|("-"))
+mul_op			(("*")|("/")|("div"))
+rel_op			(("<")|("<=")|("=")|("<>")|(">=")|(">"))
+assign_op		(":=")
+procedure		([pP][rR][oO][cC][eE][dD][uU][rR][eE])
+begin			([bB][eE][gG][iI][nN])
+if				([iI][fF])
+while			([wW][hH][iI][lL][eE])
+repeat			([rR][eE][pP][eE][aA][tT])
+until			([uU][nN][tT][iI][lL])
+then			([tT][hH][eE][nN])
+else			([eE][lL][sS][eE])
+end				([eE][nN][dD])
+do				([dD][oO]))
+built_in_func	(("readln")|("write")|("writeln"))
+procedure_call	(({built_in_func}))
+eof				([^0-9]|{ws}*)\.[^0-9]
+
+%%
+{newline}			{lineno++;}
+{ws}				return IGNORE;
+{semicolon} 		return IGNORE;
+{comma}				return IGNORE;
+{colon}				return IGNORE;
+{exp}				return EXP;
+{unsigned_int}		{
+						return UNSIGNED_INT;
+					}
+{float}				return FLOAT;
+{lpar}				return LPAR;
+{rpar}				return RPAR;
+{add_op}			return OPERATOR;
+{mul_op}			return OPERATOR;
+{rel_op}			return OPERATOR;
+{assign_op}			return IGNORE;
+{string_constant}	return STRING;
+{comment}			return IGNORE;
+{ident}				return IDENT;
+{end}				return END2;
+{eof}				return END;
+{num_error}			return ERROR;
+.					return ERROR;
+%%

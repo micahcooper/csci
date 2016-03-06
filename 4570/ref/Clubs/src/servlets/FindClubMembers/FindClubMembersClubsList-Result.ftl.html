@@ -1,0 +1,26 @@
+<html>
+<head><title>Club Membership</title>
+</head>
+<body>
+
+<h1>Club Membership</h1>
+
+<form method=post
+      action="http://uml.cs.uga.edu:8080/kochut/FindClubMembers">
+
+
+<p>Select a club: 
+<select
+  name="club_name" size="1">
+  <#list clubs as club>
+  <option>${club}</option>
+ </#list>
+</select>
+
+<p><input type=submit> <input type=reset>
+
+</form>
+
+</body>
+
+</html>

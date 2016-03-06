@@ -1,0 +1,29 @@
+<html>
+<head><title>Join Club</title>
+</head>
+<body>
+
+<h1>Joining a club</h1>
+
+<form method=post
+      action="http://waycross.cs.uga.edu/kochut-bin/JoinClub">
+
+<p>Select a person: 
+<select
+  name="person_ssn" size="1">
+  %PERSONS%
+</select>
+
+<p>Select a club: 
+<select
+  name="club_name" size="1">
+  %CLUBS%
+</select>
+
+<p><input type=submit> <input type=reset>
+
+</form>
+
+</body>
+
+</html>

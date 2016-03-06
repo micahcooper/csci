@@ -1,0 +1,9 @@
+cs4570program1/:
+total 16
+-rw-r--r--   1 cooper       352 Jan 30 22:11 README
+-rw-r--r--   1 cooper      1911 Jan 30 21:57 main.c
+-rw-r--r--   1 cooper       180 Jan 30 21:52 makefile
+-rw-------   1 cooper         0 Jan 30 22:17 rec23583
+-rw-r--r--   1 cooper       257 Jan 30 22:05 sample1.p
+-rw-r--r--   1 cooper      1752 Jan 30 22:02 upc.l
+-rw-r--r--   1 cooper       431 Jan 30 13:44 y.tab.h
