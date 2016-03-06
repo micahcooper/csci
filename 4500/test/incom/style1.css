@@ -1,0 +1,39 @@
+body{
+    background-color:lavender;
+}
+table{
+    width:400px;
+    border-style:outset;
+    border-width:5px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:silver;
+}
+td{
+    width:195px;   
+}
+textarea{
+    background-color:lightgreen;
+}
+select{
+    background-color:skyblue;
+}
+form{
+}
+input{
+}
+.texta{
+    background-color:lightgreen;
+}
+.buttons{
+    color:yellow;
+    background-color:black;
+    margin-left:auto;
+    margin-right:auto;
+}
+.menuTitle{
+    color:black;
+    text-align:center;
+    font-family:georgia;
+    font-size:120%;
+}

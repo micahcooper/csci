@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="RSSLookUp" default="all" basedir="." >
+
+    <target name="setUp">
+	<property name="build" value="./build/web/WEB-INF/classes" />
+	<property name="package" value="build/web/WEB-INF/classes/mrcooper" />
+	<property name="source" value="./src" />
+	<property name="files" value="./../../../../../pub" />
+	<property name="deploy" value="../../../../../opt/SUNWappserver/domains/domain1/autodeploy" />
+    </target>	
+
+
+    <target name="compile">
+	<javac srcdir="src" destdir="${build}"> 
+	    <classpath>
+		<pathelement path="${package}" />
+	    </classpath>
+	</javac>
+	<javac srcdir="test" destdir="${build}">
+     	    <classpath>
+		<pathelement path="${package}" />
+		<pathelement path="${files}" />
+	    </classpath>
+	</javac>
+    </target>
+
+    <target name="run" depends="all">
+	<java classname="mrcooper.RSSLookUp">
+	    <classpath>
+		<pathelement location="${files}/mysql.jar" />
+		<pathelement path="${build}" />
+	    </classpath>
+	</java>
+    </target>
+
+    <target name="test" depends="all">
+    </target>
+
+    <target name="deploy" depends="all">
+	<war destfile="dist/mrcooper.war" webxml="build/web/WEB-INF/web.xml" basedir="build/web" />
+	<copy file="dist/mrcooper.war" todir="${deploy}" />
+    </target>
+
+    <target name="all" depends="setUp, compile" />
+
+</project>

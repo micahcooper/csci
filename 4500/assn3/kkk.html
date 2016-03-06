@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htmll4/strict.dtd">
+<html>
+	<head>
+		<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+
+		<script type=text/javascript>
+/*<![CDATA[*/
+
+			var array_of_months =new Array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+
+			document.write("<form name=yearForm>");
+			document.write("Enter a different year-->");
+			document.write("<input type=text size=10 name=year >");
+			document.write("<input type=submit value=Submit >");
+			document.write("<\/form>");
+
+			getYear();
+	
+		   /* Sets year to either default(1970) or user specified
+			* Inputs: 
+			*		window.location.search
+			* Errors: 1)if input is non-digits, alert user to enter a number>1970
+			*		  2)if year < 1970, alert user to enter year > 1970	
+			*/	
+			function getYear(){
+				var getYear=0;
+				var start = window.location.search;
+
+				if(!start[6])
+					getYear=2007;
+				else{
+					for(var i=0; i<4; i++)
+						 getYear += start[6+i]; 
+					getYear=parseInt(getYear,10);
+				}
+				if(getYear<1970)
+					alert("Please enter a year greater than 1970!");
+				else{
+					document.write("<table cellspacing=20><tr><td>");
+					document.write("<h1>Kankakee Kumquat Klub Calender Page<\/h1><\/td>");
+					document.write("<td><img src=http://www.cs.uga.edu/~cooper/pictures/kumquats.jpg ");
+					document.write("height=300 width=300 />");
+					document.write("<\/td><\/table><h2>"+getYear+"<\/h2>");
+					displayYearlyCalender(getYear);
+				}
+			}
+				
+					
+			
+
+
+   			/* Returns the date on which a specific second tuesday falls.
+			* Input(s):
+			*   desired_year
+			*	desired_month
+			*
+			* Errors:
+			*/
+			function secondTuesdayDate(desired_year, desired_month) {
+				var second_tue=0;
+				var first_day_of_month = new Date(desired_year,desired_month,01);
+	
+				if(first_day_of_month.getDay()<3)
+					second_tue=10-first_day_of_month.getDay();
+				else
+					second_tue=14-((first_day_of_month.getDay())-3);
+
+				return second_tue;
+			}
+
+   			/* Returns the date of the fourth tuesday on a specific month and year.	
+			* Input(s):
+			*    desired_year
+			*    desired_month
+			*
+			*/
+			function fourthTuesdayDate(desired_year, desired_month){
+				fourth_tue = secondTuesdayDate(desired_year, desired_month)+14;
+				return fourth_tue;	
+			}
+
+   			/* Prints the monthly calender, with Klub meetings.
+			* Input(s): year
+			*			month
+			* Errors:
+			*/
+			function displayMonthlyCalender(year,month){
+				var start_of_month_day = (new Date(year,month, 1)).getDay();
+				var end_of_month_day = new Date(year,month+1, 0).getUTCDate();;
+				var day_of_month_counter=1;
+				var day_of_week_counter=1;
+				var second_tue=secondTuesdayDate(year,month);
+				var fourth_tue=fourthTuesdayDate(year,month);
+		
+				document.write("<table border=2 height=350 width=100><tr>");
+				document.write("<tr><td colspan=7 align='center'>"+array_of_months[month]+"<\/td><\/tr>");
+
+				document.write("<td>Sunday<\/td><td>Monday<\/td><td>Tuesday  <\/td>");
+				document.write("<td>Wednesday<\/td><td>Thursday<\/td><td>Friday<\/td>");
+				document.write("<td>Saturday<\/td>");
+				document.write("<tr>");
+
+				if(start_of_month_day>0){
+				    //prints table data of a non-day,  
+					for(var i=0; i<start_of_month_day; i++)
+						document.write("<td>.<\/td>");
+
+					//prints a table data of a day in the first week of the month
+					for(var i=start_of_month_day; i<7; i++)
+						document.write("<td height=55><font FACE=system>"+day_of_month_counter+++"<\/font><\/td>");
+
+					document.write("<\/tr><tr>");
+				}
+
+				//prints table data of a day in a month, can include a meeting
+				while(day_of_month_counter != end_of_month_day+1){
+					if(day_of_month_counter==second_tue || day_of_month_counter==fourth_tue)
+						document.write("<td bgcolor='#FF0022'>Meeting @ 7:30<\/td>");
+					else
+						document.write("<td height=55><font FACE=system> "+day_of_month_counter+"<\/font></td>");
+					if(day_of_week_counter%7==0)
+						document.write("<\/tr><tr>");
+					day_of_month_counter++;
+					day_of_week_counter++;
+				}
+				document.write("<\/table><br\ />");
+
+
+			}
+
+   			/* Prints the yearly calender.
+			* Input(s): year - supplied from user, after page loads
+			*
+			*/
+			function displayYearlyCalender(year){
+				document.write("<table width=2000><tr valign='middle' align='center'");
+				//print a single month to the table
+				for(var i=1; i<13; i++){
+					document.write("<td>");
+					displayMonthlyCalender(year,i-1);
+					document.write("<\/td>");
+
+					if(i % 4==0)
+						document.write("<\/tr><tr valign=middle align=center>");
+				}
+				document.write("<\/table>");
+			}		
+/*]]>*/
+		</script>
+	</head>
+
+	<body>
+	</body>
+</html>

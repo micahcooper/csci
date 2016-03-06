@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="manager.xsl"?>
+
+<!DOCTYPE resume [
+
+	<!ELEMENT resume (address, objective_m,objective_t, assertions+, evidence )>
+	<!ELEMENT address (name, line1 , line2, line3 )>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT line1 (#PCDATA)>
+	<!ELEMENT line2 (#PCDATA)>
+	<!ELEMENT line3 (#PCDATA)>
+	<!ELEMENT objective_m (#PCDATA)>
+	<!ELEMENT objective_t (#PCDATA)>
+	<!ELEMENT assertions (t_skill, m_skill)>
+	<!ELEMENT t_skill (#PCDATA)>
+	<!ELEMENT m_skill (#PCDATA)>
+	<!ELEMENT evidence (work+, education+, award*)>
+	<!ELEMENT work (employer, position, responsibility*, date)>
+	<!ELEMENT employer (#PCDATA)>
+	<!ELEMENT position (#PCDATA)>
+	<!ELEMENT responsibility (m_task, t_task)>
+	<!ELEMENT m_task (#PCDATA)>
+	<!ELEMENT t_task (#PCDATA)>
+	<!ELEMENT date (#PCDATA)>
+	<!ELEMENT education (school, status)>
+	<!ELEMENT school (#PCDATA)>
+	<!ELEMENT status (#PCDATA)>
+	<!ELEMENT award (#PCDATA)>
+]>
+
+<resume>
+	<address>
+		<name>Micah Cooper</name>
+		<line1>680 Timothy Road</line1>
+		<line2>Athens, GA 30606</line2>
+		<line3>7062087065</line3>
+	</address>
+	
+	<objective_m>
+		To find an entry level postion...
+	</objective_m>
+	<objective_t>
+		An entry level position in the technology industry where a background in web programming and meeting deadlines would be needed.
+	</objective_t> 
+
+	<assertions>
+		<t_skill>Knowledge of computers, Microsoft Office, Excel, Photoshop</t_skill>
+		<m_skill>Experience working with deadlines and meeting goals</m_skill>
+	</assertions>
+	<assertions>
+		<t_skill>Experience programming in groups and independently</t_skill>
+		<m_skill>Experience working in teams and independently</m_skill>
+	</assertions>
+	<assertions>
+		<t_skill>Ability to trace debugging problems to their source</t_skill>
+		<m_skill>Ability to trace problems to their sources</m_skill>
+	</assertions>
+	<assertions>
+		<t_skill>Skilled at clarifying problems or situations in progam design</t_skill>
+		<m_skill>Skilled at clarifying problems or situations</m_skill>
+	</assertions>
+	<assertions>
+		<t_skill>Experience in anticipating and diagnosing programming problems</t_skill>
+		<m_skill>Experience in anticipating and diagnosing problems</m_skill>
+	</assertions>
+		
+
+	<evidence>
+		<work>
+			<employer>DailAmerica</employer>
+			<position>Telephone Service Representative</position>
+			<responsibility>
+				<m_task>Promptly answer phone calls and help customers with questions.</m_task>
+				<t_task>Take phone calls and assist customers with questions.</t_task>
+			</responsibility>
+			<responsibility>
+				<m_task>Successfully meet all criteria regarding quality and conversion</m_task>
+				<t_task>Attended every training meeting on the program I worked.</t_task>
+			</responsibility>
+			<responsibility>
+				<m_task>Lead all TSR's on the floor with overall conversion for three months</m_task>
+				<t_task>Assist fellow TSR's with questions on computers and help with their quality</t_task>
+			</responsibility>
+			<responsibility>
+				<m_task>Perfect Attendence during my employment.</m_task>
+				<t_task>Perfect Attendence during my employment.</t_task>
+			</responsibility>
+			<date></date>
+		</work>
+
+		<work>	
+			<employer>FedEx Packaging Inc.</employer>
+			<position>Package Handler</position>
+			<responsibility>
+				<m_task>Accurately scanned and loaded packages onto their appropriate trailers.</m_task>
+				<t_task>Data entry packages which required destination address at 500 per hour</t_task>
+			</responsibility>
+			<responsibility>
+				<m_task>Assigned the position to train new employees on loading and safety measures</m_task>
+				<t_task>Assigned to close trailers and enter technical data in the computer.</t_task>
+			</responsibility>
+			<responsibility>
+				<m_task>Organized the flow of packages and workers during high volume times.</m_task>
+				<t_task>Organized the flow of packages and workers during high volume times.</t_task>
+			</responsibility>
+			<responsibility>
+				<m_task>Awarded "Employee of the Month Award" twice during my employment</m_task>
+				<t_task>Awarded "Employee of the Month Award" twice during my employment</t_task>
+			</responsibility>
+			<date></date>
+		</work>
+	
+		<education>
+			<school>Mount De Sales Academy</school>
+			<status>Diploma 2000</status>
+		</education>
+		<education>
+			<school>University of Georgia</school>
+			<status>Undergraduate work 2001-Present</status>
+		</education>
+
+		<award>Time Person of the Year(2006)</award>
+	</evidence>
+</resume>

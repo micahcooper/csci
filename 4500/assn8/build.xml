@@ -1,0 +1,58 @@
+<project name="RSSParser" default="compile">
+   
+    <path id="jdbc">
+	<pathelement location="../../../../pub/xerces.jar" />
+    </path>
+
+    <target name="prepare">
+	<mkdir dir="./classes" />
+    </target>
+
+    <target name="compile" depends="prepare">
+	<javac srcdir="./src" destdir="./classes">
+	    <classpath>
+		<pathelement path="../../../../pub/xerces.jar" />
+	    </classpath>
+	</javac>
+	<javac srcdir="./test_src" destdir="./classes">
+	    <classpath>
+		<pathelement path="../../../../pub/junit.jar" />
+	    </classpath>
+ 	</javac>
+    </target>
+
+    <target name="test" depends="compile">
+	<junit printsummary="true" >
+	    <formatter type="plain" usefile="false" />
+	    <test name="TestRSSParser" />
+	    <classpath>
+		<pathelement path="./classes" />
+		<pathelement path="../../../../pub/mysql.jar" />
+	    </classpath>
+	</junit>	
+    </target>
+
+    <target name="doc">
+	<javadoc destdir="./doc" packagenames="parsers">
+	    <fileset dir="./src" />
+	</javadoc>
+    </target>
+
+    <target name="run">
+        <java classname="RSSParser" >
+            <classpath>
+                <pathelement location="../../../../pub/mysql.jar" />
+                <pathelement location="../../../../pub/xerces.jar" />
+                <pathelement path="./classes/" />
+            </classpath>
+	    <arg value="http://www.cs.uga.edu/~dme/csci4300/Assignments/RSS_test1.xml" />
+        </java>
+    </target>
+
+    <target name="nothing">
+            <arg value="http://www.cs.uga.edu/~dme/csci4300/Assignments/RSS_test1.xml" />
+    </target>
+
+
+</project>
+

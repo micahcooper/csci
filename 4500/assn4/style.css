@@ -1,0 +1,20 @@
+div{
+	background-color:#ADD8E6;
+}
+
+.tag{
+	font: 18pt sans-serif;
+	color:red;
+}
+.add{
+	list-style-type:none;
+}
+.open{
+	display:block;
+}
+.close{
+	display:none;
+}
+.und{
+	font-style:italic;
+}

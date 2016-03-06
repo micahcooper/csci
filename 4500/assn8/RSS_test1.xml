@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+   <rss xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+   <channel>
+      <title>Test File 1</title>
+      <description>This file contains several "item" elements for testing RSS parsers</description>
+      <link>http://www.cs.uga.edu/~dme/csci4300/Assignments/Java_XML_Parsing.html</link>
+      <language>en-us</language>
+      <pubDate>Mon, 19 Mar 2007 13:20:00 EST</pubDate>
+      <ttl>15</ttl>
+       <item>
+         <title>JDBC Programmers Run Amok</title>
+         <description>A passing Good-Humor ice cream truck provoked a riot among bored Java programmers at
+            Leviathan Software headquarters in Ukiah, CA. Several programmers were bruised, but no serious injuries were
+            reported.</description>
+      </item>
+      <item>
+         <title>Kate Blanchett loves Java</title>
+         <pubDate>Mon, 19 Mar 2007 13:23:00 EST</pubDate>
+         <description>Movie star Kate Blanchett gushed, "I love Java programming! I feel incrediby sexy
+            when I finally get my JDBC code to compile." Kate's comments at yesterday's Mega-Star Jamboree
+            press conference left veteran celebrity reporters scratching their heads.</description>
+      </item>
+      <item>
+         <title>Spring arrives in Athens, GA</title>
+         <pubDate>Mon, 19 Mar 2007 13:25:00 EST</pubDate>
+         <description>University of Georgia students deserted classes en masse today, as a wave of
+             balmy spring weather hit this beautiful college town. Only the Computer Science majors
+             remained at their posts.</description>
+      </item>
+      <item>
+         <title>Artificial Intelligence Experiment leads to problems</title>
+         <pubDate>Mon, 19 Mar 2007 13:29:00 EST</pubDate>
+         <description>UGA student Lisa Lesser-Known remains under medical observation following an abortive
+            attempt by Artificial Intelligence students to implant a microprocessor in her brain. Ever since
+            the experiment, Ms. Lesser-Known has been walking around campus with a gait like the Munchkins from
+            Wizard of Oz, singing old show tunes. Her friends are concerned, but describe her behavior as
+            "normal, for Lisa anyway."
+            </description>
+      </item>
+      <item>
+         <title>Spring training draws record crowds</title>
+         <pubDate>Mon, 19 Mar 2007 13:34:00 EST</pubDate>
+         <description> Attendance at Major League Baseball spring training games in Florida could top the 
+         1.6 million record set the last two years.  Figures released Friday by the Florida Sports Foundation 
+         show more than 858,000 fans have gone to Grapefruit League games at 17 ball parks statewide. Average 
+         attendance for each of the 145 games played through Thursday was 5,921, with some parks getting nearly 
+         twice that number for some games. The New York Yankees have maintained their state lead with average 
+         attendance of 10,302 at Legends Field in Tampa. However, their biggest crowd so far this month was 
+         11,049 on March 8 when they played the Atlanta Braves at Wide World of Sports. Boosting the Cactus League 
+         attendance was the renewed interest in the Detroit Tigers, with 7,375 fans per game at Joker Marchant Stadium.
+         ---www.springtraingingonline.com
+            </description>
+      </item>
+   </channel>
+</rss>

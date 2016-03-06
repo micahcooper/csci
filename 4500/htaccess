@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "My Restricted Area"
+AuthUserFile /home2/mrcooper/.passwd
+AuthGroupFile /home2/mrcooper/.group
+Require group mygroup

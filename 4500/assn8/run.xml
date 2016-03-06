@@ -1,0 +1,17 @@
+<project name="RunRSSParser" default="run">
+
+    <path id="jdbc">
+	<pathelement path="../../../../pub/mysql.jar" />
+    </path>
+
+    <target name="run">
+	<java classname="RSSParser" >
+	    <classpath>
+		<pathelement path="../../../../pub/mysql.jar" />
+		<pathelement location="./src/" />
+	    </classpath>		
+	    <arg value="http://www.cs.uga.edu/~dme/csci4300/Assignments/RSS_test1.xml" />
+ 	</java>
+    </target>
+
+</project>

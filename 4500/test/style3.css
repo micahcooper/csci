@@ -1,0 +1,54 @@
+body{
+  background-color:black;
+}
+p{
+  background-color:lavender;
+  margin-left:auto;
+  margin-right:auto;
+}
+tr{
+}
+td{
+  text-align:center;
+  background-color:skyblue;
+}
+input{
+  background-color:lightgreen;
+}
+
+
+
+.tablea{
+  width:750px;
+  height:500px;
+  background-color:black;
+  border-style:ridge;
+  margin-left:auto;
+  margin-right:auto;
+}
+.logo{
+  background-image:url(beer.jpg);
+  background-position:center;
+}
+.buttons{
+  width:100px;
+  background-color:black;
+  font-weight:bold;
+  color:red;
+  border-color:black
+}
+.log{
+  width:135px;
+  height:55px;
+}
+.member{
+  height:115px;
+}
+.nuForm{
+  width:216px;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+.addBeer{
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions targetNamespace="http://movies/" name="ReviewListService" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://movies/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://movies/" schemaLocation="ReviewListService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="getReviews">
+    <part name="parameters" element="tns:getReviews"/>
+  </message>
+  <message name="getReviewsResponse">
+    <part name="parameters" element="tns:getReviewsResponse"/>
+  </message>
+  <portType name="ReviewList">
+    <operation name="getReviews">
+      <input message="tns:getReviews"/>
+      <output message="tns:getReviewsResponse"/>
+    </operation>
+  </portType>
+  <binding name="ReviewListPortBinding" type="tns:ReviewList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="getReviews">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="ReviewListService">
+    <port name="ReviewListPort" binding="tns:ReviewListPortBinding">
+      <soap:address location="REPLACE_WITH_ACTUAL_URL"/>
+    </port>
+  </service>
+</definitions>
+

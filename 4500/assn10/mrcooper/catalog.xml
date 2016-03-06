@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+<system systemId="http://zion.cs.uga.edu:8081/MovieCatalogApp/MovieCatalogService?WSDL" uri="conf/xml-resources/web-service-references/MovieCatalogService/wsdl/zion.cs.uga.edu_8081/MovieCatalogApp/MovieCatalogService.wsdl"/>
+<system systemId="http://zion.cs.uga.edu:8081/MovieCatalogApp/MovieCatalogService?xsd=1" uri="conf/xml-resources/web-service-references/MovieCatalogService/wsdl/zion.cs.uga.edu_8081/MovieCatalogApp/MovieCatalogService.xsd_1.xsd"/>
+<system systemId="http://zion.cs.uga.edu:8081/dmeReviews/ReviewListService?wsdl" uri="conf/xml-resources/web-service-references/ReviewListService/wsdl/zion.cs.uga.edu_8081/dmeReviews/ReviewListService.wsdl"/>
+<system systemId="http://zion.cs.uga.edu:8081/dmeReviews/ReviewListService?xsd=1" uri="conf/xml-resources/web-service-references/ReviewListService/wsdl/zion.cs.uga.edu_8081/dmeReviews/ReviewListService.xsd_1.xsd"/>
+<system systemId="http://zion.cs.uga.edu:8081/dohcjsReview/dohcjsReviewListService?wsdl" uri="conf/xml-resources/web-service-references/dohcjsReviewListService/wsdl/zion.cs.uga.edu_8081/dohcjsReview/dohcjsReviewListService.wsdl"/>
+<system systemId="http://zion.cs.uga.edu:8081/dohcjsReview/dohcjsReviewListService?xsd=1" uri="conf/xml-resources/web-service-references/dohcjsReviewListService/wsdl/zion.cs.uga.edu_8081/dohcjsReview/dohcjsReviewListService.xsd_1.xsd"/>
+<system systemId="http://zion.cs.uga.edu:8081/mrcooperReviews/ReviewsService?wsdl" uri="conf/xml-resources/web-service-references/ReviewsService/wsdl/zion.cs.uga.edu_8081/mrcooperReviews/ReviewsService.wsdl"/>
+<system systemId="http://zion.cs.uga.edu:8081/mrcooperReviews/ReviewsService?xsd=1" uri="conf/xml-resources/web-service-references/ReviewsService/wsdl/zion.cs.uga.edu_8081/mrcooperReviews/ReviewsService.xsd_1.xsd"/>
+<system systemId="http://zion.cs.uga.edu:8081/ksamimReviews/ksamimReviewListService?wsdl" uri="conf/xml-resources/web-service-references/ksamimReviewListService/wsdl/zion.cs.uga.edu_8081/ksamimReviews/ksamimReviewListService.wsdl"/>
+<system systemId="http://zion.cs.uga.edu:8081/ksamimReviews/ksamimReviewListService?xsd=1" uri="conf/xml-resources/web-service-references/ksamimReviewListService/wsdl/zion.cs.uga.edu_8081/ksamimReviews/ksamimReviewListService.xsd_1.xsd"/>
+<system systemId="http://zion.cs.uga.edu:8081/acrononReviews/acrononReviewWebService?wsdl" uri="conf/xml-resources/web-service-references/acrononReviewWebService/wsdl/zion.cs.uga.edu_8081/acrononReviews/acrononReviewWebService.wsdl"/>
+<system systemId="http://zion.cs.uga.edu:8081/acrononReviews/acrononReviewWebService?xsd=1" uri="conf/xml-resources/web-service-references/acrononReviewWebService/wsdl/zion.cs.uga.edu_8081/acrononReviews/acrononReviewWebService.xsd_1.xsd"/>
+<system systemId="http://zion.cs.uga.edu:8081/jweissWebApp/jweissWebService?wsdl" uri="conf/xml-resources/web-service-references/jweissWebService/wsdl/zion.cs.uga.edu_8081/jweissWebApp/jweissWebService.wsdl"/>
+<system systemId="http://zion.cs.uga.edu:8081/jweissWebApp/jweissWebService?xsd=1" uri="conf/xml-resources/web-service-references/jweissWebService/wsdl/zion.cs.uga.edu_8081/jweissWebApp/jweissWebService.xsd_1.xsd"/>
+</catalog>

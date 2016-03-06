@@ -1,0 +1,27 @@
+span{
+		font: 8pt/16pt georgia;
+		text-align: right;
+	}
+
+body{
+		background-color: #B0E0E6;
+		margin: 10px 10px 0px 20px
+	}
+
+table{
+		table-layout: auto;
+	}
+td{
+	empty-cells: hide;
+	}
+
+p{
+		font: 10pt sans-serif;
+	}		
+
+.special{
+		text-decoration: underline;
+		color: #CD853F;
+		font-weight: bold;
+	}
+

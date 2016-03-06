@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="RSSLookUp" default="all" basedir="." >
+
+    <target name="setUp">
+	<property name="build" value="./build/web/WEB-INF/classes" />
+	<property name="package" value="build/web/WEB-INF/classes/movies" />
+	<property name="source" value="./src" />
+	<property name="jars" value="./../../../../../pub" />
+	<property name="deploy" value="../../../../../opt/glassfish/domains/domain1/autodeploy" />
+    </target>	
+
+
+    <target name="compile">
+	<javac srcdir="src" destdir="${build}"> 
+	    <classpath>
+		<pathelement path="${package}" />
+	    </classpath>
+	</javac>
+	<javac srcdir="test" destdir="${build}">
+     	    <classpath>
+		<pathelement path="${package}" />
+		<pathelement path="${jars}" />
+	    </classpath>
+	</javac>
+    </target>
+
+    <target name="run" depends="all">
+	<java classname="movies.ReviewsHandler">
+	    <classpath>
+		<pathelement location="${jars}/mysql.jar" />
+		<pathelement path="${build}" />
+		<pathelement path="${package}" />
+	    </classpath>
+	</java>
+    </target>
+
+    <target name="test" depends="all">
+        <junit printsummary="true" >
+            <formatter type="plain" usefile="false" />
+            <test name="mrcooper.TestRSSLookUp" />
+            <classpath>
+                <pathelement path="${build}" />
+                <pathelement path="${jars}" />
+                <pathelement path="${package}" />
+            </classpath>
+	    <sysproperty key="test_db" value="rss_test" />
+        </junit>
+    </target>
+
+    <target name="doc">
+        <javadoc destdir="./doc" packagenames="mrcooper">
+            <fileset dir="./src" />
+        </javadoc>
+    </target>
+
+    <target name="deploy" depends="all">
+	<war destfile="dist/mrcooperReviews.war" webxml="build/web/WEB-INF/web.xml" basedir="build/web" />
+	<copy file="dist/mrcooperReviews.war" todir="${deploy}" />
+    </target>
+
+    <target name="all" depends="setUp, compile" />
+
+    <target name="nothing">
+    </target>
+</project>

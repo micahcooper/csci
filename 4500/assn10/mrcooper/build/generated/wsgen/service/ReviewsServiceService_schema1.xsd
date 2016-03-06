@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://movies/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="getReviews" type="ns1:getReviews" xmlns:ns1="http://movies/"/>
+
+  <xs:complexType name="getReviews">
+    <xs:sequence>
+      <xs:element name="movie_id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="getReviewsResponse" type="ns2:getReviewsResponse" xmlns:ns2="http://movies/"/>
+
+  <xs:complexType name="getReviewsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

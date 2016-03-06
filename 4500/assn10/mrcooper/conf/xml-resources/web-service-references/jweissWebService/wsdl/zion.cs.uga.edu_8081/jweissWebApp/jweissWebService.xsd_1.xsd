@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://jweiss/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://jweiss/">
+<xs:element name="getMovieReviews" type="tns:getMovieReviews"></xs:element>
+<xs:element name="getMovieReviewsResponse" type="tns:getMovieReviewsResponse"></xs:element>
+<xs:complexType name="getMovieReviews"><xs:sequence><xs:element name="movie_id" type="xs:int"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getMovieReviewsResponse"><xs:sequence><xs:element name="return" type="xs:string" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+</xs:schema>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="ReviewsService">
+      <implementation-class>movies.ReviewsService</implementation-class>
+    </service>
+    <service name="ReviewList">
+      <implementation-class>movies.ReviewList</implementation-class>
+    </service>
+  </services>
+  <clients>
+    <client name="MovieCatalogService">
+      <wsdl-url>http://zion.cs.uga.edu:8081/MovieCatalogApp/MovieCatalogService?WSDL</wsdl-url>
+      <local-wsdl-file>zion.cs.uga.edu_8081/MovieCatalogApp/MovieCatalogService.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">movies</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+    </client>
+    <client name="ReviewListService">
+      <wsdl-url>http://zion.cs.uga.edu:8081/dmeReviews/ReviewListService?wsdl</wsdl-url>
+      <local-wsdl-file>zion.cs.uga.edu_8081/dmeReviews/ReviewListService.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">dmeReviews</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+    </client>
+    <client name="dohcjsReviewListService">
+      <wsdl-url>http://zion.cs.uga.edu:8081/dohcjsReview/dohcjsReviewListService?wsdl</wsdl-url>
+      <local-wsdl-file>zion.cs.uga.edu_8081/dohcjsReview/dohcjsReviewListService.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">dohcjsReviews</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+    </client>
+    <client name="ReviewsService">
+      <wsdl-url>http://zion.cs.uga.edu:8081/mrcooperReviews/ReviewsService?wsdl</wsdl-url>
+      <local-wsdl-file>zion.cs.uga.edu_8081/mrcooperReviews/ReviewsService.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">mrcService</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+    </client>
+  </clients>
+  <jsr109>false</jsr109>
+</jax-ws>
