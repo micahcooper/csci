@@ -1,2 +1,2 @@
-# csci4760
-computer networks
+# csci
+computer science
