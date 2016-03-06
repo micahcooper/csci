@@ -1,0 +1,37 @@
+DESIGN DOCUMENT
+---------------
+
+The application level protocol is entirely composed of an agreed upon
+header paradigm.  This is built on top of UDP.  The header includes
+the following information: 
+	flags - this determines the actions to be taken by server and client
+	sequence number - this indicates the packet number
+	filename - this is the name of the file being transferred
+	data length - indicates the length of data in a packet
+	unique id - this is the indentifying marker to reduce unwanted packet
+	data - the rest of the packet.
+The total application packet size is 65500 bytes.
+
+To increase the reliability of the UDP transport my implementation 
+requires a "handshake" and attempts to control the ordered transfer of 
+one packet at a time.  The server will always make a request for the 
+next packet it wants.  The client will then send the requested packet,
+regardless of what it last sent.
+
+
+The Anatomy of my implemented packet
++---------------------------+
++          flags            + 
++---------------------------+
++      sequence number      + 
++---------------------------+
++         filename          + 
++---------------------------+
++       data length         +
++---------------------------+
++	sender unique id		+
++---------------------------+
++							+
++			data			+
++							+
++---------------------------+
